@@ -1,3 +1,25 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #FFFFFF;
+    transition: all 0.4s ease-in-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +27,7 @@
 
 body {
   background: #FFFFFF;
-  color: #0EB3FA;
+  color: #FFFFFF;
   font-family: 'Helvetica', sans-serif;
   line-height: 1.5; }
   body .container {
@@ -29,7 +51,7 @@ h3 {
 a {
   text-decoration: none;
   color: #FF861F;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.4s ease-in-out; }
   a:hover {
     color: red; }
 
@@ -79,7 +101,7 @@ section, footer {
   color: #FF861F; }
 
 #hero#hero {
-  background: url(../img/mj3.jpg);
+  background: url(..css/img/mj.jpg);
   background-attachment: fixed;
   background-size: cover;
   position: relative; }

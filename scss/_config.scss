@@ -3,11 +3,11 @@ $secondary-color: #FF861F;
 $grey: #444444;
 $white: #FFFFFF;
 $show-home-image: true;
-$home-image: url(../img/mj3.jpg);
+$home-image: url(..css/img/mj.jpg);
 $background-opacity: 0.9;
 
 @mixin easeInOut {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 @mixin background {
