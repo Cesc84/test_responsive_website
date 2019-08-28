@@ -1,0 +1,27 @@
+// Headings
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 3rem;
+    z-index: 99;
+    line-height: 1.2;
+  }
+  &.sm-heading {
+    font-size: 2rem;
+    padding-top: 6rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+  @include easeInOut();
+  &:hover {
+    color: lighten($secondary-color, 10);
+  }
+}

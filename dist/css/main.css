@@ -1,16 +1,22 @@
 .menu-btn {
   position: absolute;
-  z-index: 3;
+  z-index: 99;
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.4s ease-in-out; }
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #FFFFFF;
-    transition: all 0.4s ease-in-out; }
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -19,6 +25,124 @@
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  background: #444444;
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  right: 0;
+  text-align: center;
+  opacity: 0.9;
+  visibility: hidden;
+  transform: translate(-50%, -50%) translate3d(100%, -100%, 0);
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+  @media screen and (min-width: 768px) {
+    .menu {
+      top: 0;
+      left: 0;
+      height: 100px; } }
+  .menu.show {
+    transform: translate3d(0, 0, 0);
+    visibility: visible; }
+  .menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    list-style: none; }
+    @media screen and (min-width: 768px) {
+      .menu ul {
+        width: auto; } }
+    .menu ul li {
+      transform: translate3d(100%, -100%, 0);
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out; }
+      @media screen and (min-width: 768px) {
+        .menu ul li {
+          float: left; } }
+      .menu ul li.show {
+        transform: translate3d(0, 0, 0); }
+      .menu ul li .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+        padding-bottom: 1rem; }
+        @media screen and (min-width: 768px) {
+          .menu ul li .nav-link {
+            padding-right: 40px;
+            font-size: 1.4rem; }
+            .menu ul li .nav-link:last-child {
+              padding-right: none;
+              padding-bottom: 0; } }
+        .menu ul li .nav-link:after {
+          content: '';
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: #ff9980;
+          position: absolute;
+          top: 1rem;
+          left: -18px;
+          opacity: 0; }
+          @media screen and (min-width: 768px) {
+            .menu ul li .nav-link:after {
+              top: 2rem;
+              left: 30%; } }
+        .menu ul li .nav-link:hover:after {
+          -webkit-transition: all 300ms ease-in-out;
+          -moz-transition: all 300ms ease-in-out;
+          -o-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+          opacity: 1; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.4s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.6s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.8s; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 3rem;
+    z-index: 99;
+    line-height: 1.2; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    font-size: 2rem;
+    padding-top: 6rem; }
+
+a {
+  text-decoration: none;
+  color: #ff704d;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+  a:hover {
+    color: #ff9980; }
 
 * {
   margin: 0;
@@ -29,35 +153,15 @@ body {
   background: #FFFFFF;
   color: #FFFFFF;
   font-family: 'Helvetica', sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  letter-spacing: 1.8px; }
   body .container {
     width: 100%;
     margin: 0 auto; }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 3rem; }
-  h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
-    font-size: 2rem; }
-
-a {
-  text-decoration: none;
-  color: #FF861F;
-  transition: all 0.4s ease-in-out; }
-  a:hover {
-    color: red; }
-
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 98;
   width: 100%; }
 
 section, footer {
@@ -65,7 +169,7 @@ section, footer {
   padding: 4rem;
   height: 600px; }
   section.orange, footer.orange {
-    background: #FF861F; }
+    background: #ff704d; }
   section.white, footer.white {
     background: #FFFFFF; }
   section.blue, footer.blue {
@@ -98,19 +202,37 @@ section, footer {
         width: calc(100% / 12 * 3); } }
 
 .highlight {
-  color: #FF861F; }
+  display: block;
+  font-size: 4rem;
+  color: #ff704d;
+  font-weight: 700; }
 
-#hero#hero {
-  background: url(..css/img/mj.jpg);
-  background-attachment: fixed;
+#hero {
+  position: relative;
+  background: url("../img/mj.jpg");
   background-size: cover;
-  position: relative; }
-  #hero#hero:after {
+  background-position: center; }
+  #hero:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: rgba(68, 68, 68, 0.9); }
+    height: 600px;
+    z-index: 10;
+    background: #444444;
+    opacity: 0.8; }
+  #hero .row {
+    position: absolute;
+    z-index: 11; }
+    #hero .row .headings {
+      text-align: center; }
+    #hero .row .icons {
+      position: absolute;
+      top: 350px; }
+      #hero .row .icons a {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 5px; }
+        #hero .row .icons a:hover {
+          color: #ff9980; }
