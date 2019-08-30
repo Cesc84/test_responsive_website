@@ -1,0 +1,42 @@
+// Headings
+$font-family: 'Poppins', Arial, Helvetica, Sans-Serif;
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+  z-index: 99;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 1.4rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: .8rem;
+}
+
+p {
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+  @include easeInOut();
+  &:hover {
+    color: lighten($secondary-color, 10);
+  }
+}

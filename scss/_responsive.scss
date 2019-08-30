@@ -1,0 +1,164 @@
+// Widescreen
+@include mediaXl {
+
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  .content {
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  #grid {
+    .row {
+      padding: 20px 30px 40px 30px;
+    }
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  p {
+    font-size: .9rem;
+  }
+  section {
+    .row {
+      padding: 40px 30px;
+    }
+  }
+
+  .menu {
+    right: 0;
+    height: 600px;
+    transform: translate(-50%, -50%) translate3d(100%, -100%, 0);
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+    ul {
+      width: 100%;
+      top: 75%;
+      transform: translate(-50%, -50%);
+      li {
+        display: block;
+        padding: 0;
+        padding-bottom: 1.5rem;
+        transform: translate3d(100%, -100%, 0);
+        // slide in from right
+        &.show {
+          transform: translate3d(0, 0, 0);
+        }
+        .nav-link {
+          font-size: 1.8rem;
+          &:after {
+            top: 50%;
+            left: -24px;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .portrait {
+    img {
+      width: 100%!important;
+      height: 100%;
+    }
+  }
+
+  #grid {
+    .row {
+      padding-top: 20px;
+    }
+    .thumb {
+      width: calc(100% / 2 - 20px)!important;
+    }
+  }
+
+}
+
+// Smarthphone
+@include mediaSm {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: .8rem;
+  }
+  
+  .container {
+    .headings {
+      top: 42%!important;
+    }
+    .highlight {
+      font-size: 3rem;
+    }
+    .content {
+      width: 100%;
+    }
+  }
+
+  .orange {
+    .large-6 {
+      height: auto;
+      .content {
+        padding: 0;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  .portrait {
+    img {
+      padding-bottom: 0;
+    }
+  }
+
+  #grid {
+    .thumb {
+      float: none!important;
+      width: 100%!important;
+      margin: 20px 0 0 0!important;
+    }
+  }
+
+  .white {
+    h2 {
+      padding-bottom: 2rem!important;
+    }
+    .icons {
+      top: -3rem!important;
+      left: 6%;
+      a {
+        display: inline-block;
+        font-size: 1.5rem!important;
+        padding: 90px 10px 7px 10px;
+      }
+    }
+  }
+
+  .wrapper {
+    width: 100%!important;
+    .button {
+      width: 100%;
+    }
+  }
+
+}
+
+
+//   // Delay each nav item slide by .1s
+  @for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+      transition-delay: $x * 0.2s;
+    }
+  }
